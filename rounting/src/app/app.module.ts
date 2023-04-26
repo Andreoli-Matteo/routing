@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { FruitsComponent } from './fruits/fruits.component';
 import { GenericComponent } from './generic/generic.component';
+import { FOOComponent } from './foo/foo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalsComponent,
     FruitsComponent,
-    GenericComponent
+    GenericComponent,
+    FOOComponent
   ],
   imports: [
     BrowserModule,

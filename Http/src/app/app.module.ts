@@ -1,16 +1,17 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+
+import { HttpClientModule } from '@angular/common/http'; //Importa Il modulo http
+import { FooComponentComponent } from './foo/foo.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,
-    AppRoutingModule
+    BrowserModule, HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
