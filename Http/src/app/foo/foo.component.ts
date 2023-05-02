@@ -8,7 +8,7 @@ import {Foo} from './foo.model';
   templateUrl : './foo.component.html',
   styleUrls: ['./foo.component.css']
 })
-export class FooComponentComponent implements OnInit {
+export class FooComponent implements OnInit {
 
   fooData : Foo[] | undefined;
   data: Object | undefined;

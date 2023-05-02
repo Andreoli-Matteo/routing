@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FooComponent } from './foo/foo.component';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http'; //Importa Il modulo http
-import { FooComponentComponent } from './foo/foo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
