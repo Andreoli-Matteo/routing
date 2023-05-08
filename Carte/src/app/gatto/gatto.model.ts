@@ -1,4 +1,5 @@
 export interface Root {
+images: any
     object: string
     id: string
     oracle_id: string

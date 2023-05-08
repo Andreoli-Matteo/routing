@@ -1,2 +1,5 @@
-<p>gatto works!</p>
-<button onclick="visualizza()">visualizza</button>
+<h2>Basic Request</h2>
+<button type="button" (click)="makeRequest()">visualizza</button>
+<div *ngIf="loading">loading...</div>
+<p>{{data.images}}{{data.name}}"</p>
+
