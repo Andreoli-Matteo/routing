@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GattoComponent } from './gatto/gatto.component';
 import { PegasoComponent } from './pegaso/pegaso.component';
+import { DragoComponent } from './drago/drago.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GattoComponent,
-    PegasoComponent
+    PegasoComponent,
+    DragoComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

@@ -1,1 +1,13 @@
-<p>pegaso works!</p>
+<h2>Basic Request</h2>
+<button type="button" (click)="makeRequest()">visualizza</button>
+<div *ngIf="loading">loading...</div>
+<div>
+<img src="{{data.image_uris.small}}">
+</div>
+<div class="carta1">
+    <p>{{data.name}}</p>
+    <p>{{data.colors}}</p>
+    <p>{{data.object}}</p>
+    <p>{{data.power}}</p>
+</div>
+

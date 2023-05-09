@@ -11,22 +11,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GattoComponent {
   title = 'oooolaaaa';
-  data! : Root;
+  data !: Root;
   pic = String;
   loading!: boolean;
-  o = new Observable<Object>;
+  o !: Observable<Root>;
   constructor(public http: HttpClient) {}
 
 
    makeRequest(): void {
      console.log("here");
      this.loading = true;
-     this.o = this.http.get('https://api.scryfall.com/cards/named?fuzzy=aust+com');
+     this.o = this.http.get<Root>('https://api.scryfall.com/cards/named?fuzzy=aust+com');
      this.o.subscribe(this.getData);
    }
   
-    getData = (d: Object) => {
-      this.data = d;
+    getData = (d : Root) => {
+      this.data = (d);
       this.loading = false;
     }
    

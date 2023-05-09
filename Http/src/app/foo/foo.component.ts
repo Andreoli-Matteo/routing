@@ -24,7 +24,7 @@ export class FooComponent implements OnInit {
     this.o.subscribe(this.getData);
   }
   getData = (d: Object) => {
-    this.data = d;
+    this.data = new Obd;
     this.loading = false;
   }
 

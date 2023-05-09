@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
-import { Welcome7 } from '../pegaso/pegaso.models';
+import { Welcome9 } from './drago.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 @Component({
-  selector: 'app-pegaso',
-  templateUrl: './pegaso.component.html',
-  styleUrls: ['./pegaso.component.css']
+  selector: 'app-drago',
+  templateUrl: './drago.component.html',
+  styleUrls: ['./drago.component.css']
 })
-export class PegasoComponent {
+export class DragoComponent {
   title = 'oooolaaaa';
-  data !: Welcome7;
+  data !: Welcome9;
   pic = String;
   loading!: boolean;
-  o !: Observable<Welcome7>;
+  o !: Observable<Welcome9>;
   constructor(public http: HttpClient) {}
 
 
    makeRequest(): void {
      console.log("here");
      this.loading = true;
-     this.o = this.http.get<Welcome7>('https://api.scryfall.com/cards/named?fuzzy=pegaso-de-caballer%C3%ADa');
+     this.o = this.http.get<Welcome9>('https://api.scryfall.com/cards/named?fuzzy=azure-drake');
      this.o.subscribe(this.getData);
    }
   
-    getData = (d : Welcome7) => {
+    getData = (d : Welcome9) => {
       this.data = (d);
       this.loading = false;
     }
