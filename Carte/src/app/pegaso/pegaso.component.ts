@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Welcome7 } from '../pegaso/pegaso.models';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './pegaso.component.html',
   styleUrls: ['./pegaso.component.css']
 })
-export class PegasoComponent {
+export class PegasoComponent implements OnInit {
   title = 'oooolaaaa';
   data !: Welcome7;
   pic = String;
@@ -16,7 +16,7 @@ export class PegasoComponent {
   constructor(public http: HttpClient) {}
 
 
-   makeRequest(): void {
+  ngOnInit(): void {
      console.log("here");
      this.loading = true;
      this.o = this.http.get<Welcome7>('https://api.scryfall.com/cards/named?fuzzy=pegaso-de-caballer%C3%ADa');

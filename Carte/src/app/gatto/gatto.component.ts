@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Root} from './gatto.model';
 import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './gatto.component.html',
   styleUrls: ['./gatto.component.css']
 })
-export class GattoComponent {
+export class GattoComponent implements OnInit {
   title = 'oooolaaaa';
   data !: Root;
   pic = String;
@@ -18,7 +18,7 @@ export class GattoComponent {
   constructor(public http: HttpClient) {}
 
 
-   makeRequest(): void {
+  ngOnInit(): void {
      console.log("here");
      this.loading = true;
      this.o = this.http.get<Root>('https://api.scryfall.com/cards/named?fuzzy=aust+com');

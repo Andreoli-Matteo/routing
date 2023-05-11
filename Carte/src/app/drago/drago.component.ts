@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Welcome9 } from './drago.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './drago.component.html',
   styleUrls: ['./drago.component.css']
 })
-export class DragoComponent {
+export class DragoComponent implements OnInit {
   title = 'oooolaaaa';
   data !: Welcome9;
   pic = String;
@@ -16,7 +16,7 @@ export class DragoComponent {
   constructor(public http: HttpClient) {}
 
 
-   makeRequest(): void {
+  ngOnInit(): void {
      console.log("here");
      this.loading = true;
      this.o = this.http.get<Welcome9>('https://api.scryfall.com/cards/named?fuzzy=azure-drake');

@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { GattoComponent } from './gatto/gatto.component';
 import { PegasoComponent } from './pegaso/pegaso.component';
 import { DragoComponent } from './drago/drago.component';
+import { AncientComponent } from './ancient/ancient.component';
+import { CircleComponent } from './circle/circle.component';
+import { GenericComponent } from './generic/generic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GattoComponent,
     PegasoComponent,
-    DragoComponent
+    DragoComponent,
+    AncientComponent,
+    CircleComponent,
+    GenericComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,
