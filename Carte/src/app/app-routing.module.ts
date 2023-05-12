@@ -8,12 +8,8 @@ import { CircleComponent } from './circle/circle.component';
 import { GenericComponent } from './generic/generic.component';
 
 const routes: Routes = [
-  {path : 'gatto', component: GattoComponent},
-  {path : 'pageso', component: PegasoComponent},
-  {path : 'drago', component:DragoComponent},
-  {path:'ancient', component:AncientComponent},
-  {path:'circle', component:CircleComponent},
-  {path: 'generic', component:GenericComponent}
+  
+  {path:'generic/:id', component:GenericComponent},
   
 ];
 
